@@ -1,0 +1,92 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information:  ,  , LIC=9WSKC-72IQ4-GKFBG-VPF1F-AHNEH-0388K
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.34.0.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.34.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+C:\Users\11038\Desktop\Ã×Ëþcode\metabot-firmware-master\CANopen_master407_V2.1\USER\CANopen.uvprojx
+Project File Date:  03/02/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'CANpen'
+compiling stm32f4xx_it.c...
+compiling protocol.c...
+..\HARDWARE\PROTOCOL\protocol.c(39): warning:  #550-D: variable "ErrorCode"  was set but never used
+  static unsigned char ErrorCode;
+..\HARDWARE\PROTOCOL\protocol.c: 1 warning, 0 errors
+compiling main.c...
+compiling Control.c...
+compiling bsp_internalFlash.c...
+..\HARDWARE\internalFlash\bsp_internalFlash.c(186): warning:  #177-D: variable "Jump_To_Application"  was declared but never referenced
+  	pFunction Jump_To_Application;
+..\HARDWARE\internalFlash\bsp_internalFlash.c(187): warning:  #177-D: variable "JumpAddress"  was declared but never referenced
+  	uint32_t JumpAddress;
+..\HARDWARE\internalFlash\bsp_internalFlash.c: 2 warnings, 0 errors
+compiling gpio.c...
+compiling sensor.c...
+compiling usart.c...
+..\SYSTEM\usart\usart.c(263): warning:  #177-D: variable "isGotFrameHeader"  was declared but never referenced
+  	static bool isGotFrameHeader = false;
+..\SYSTEM\usart\usart.c: 1 warning, 0 errors
+compiling error.c...
+compiling CanopenTimer.c...
+compiling CanopenCan.c...
+compiling CanopenContral.c...
+compiling softtimer.c...
+compiling PWMTimer.c...
+compiling LobotSerialServo.c...
+compiling motorContral.c...
+..\MasterSlaverPWM\stepperMotor_Contral\motorContral.c(822): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		Rotate_SteptMotor_Start(FlashConfig.Rotate_Position + SteptRotateOvershootPosiition,FlashConfig.Rotate_V,FlashConfig.Rotate_AV,FlashConfig.Rotate_DV,negative);
+..\MasterSlaverPWM\stepperMotor_Contral\motorContral.c(845): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Rotate_SteptMotor_Start(FlashConfig.Rotate_Position  + SteptRotateOvershootPosiition,FlashConfig.Rotate_V,FlashConfig.Rotate_AV,FlashConfig.Rotate_DV,Positive);
+..\MasterSlaverPWM\stepperMotor_Contral\motorContral.c(865): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Rotate_SteptMotor_Start(FlashConfig.Rotate_Position  + SteptRotateOvershootPosiition,FlashConfig.Rotate_V,FlashConfig.Rotate_AV,FlashConfig.Rotate_DV, negative);
+..\MasterSlaverPWM\stepperMotor_Contral\motorContral.c(898): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		steptBigFork_Info.pulse = Position * spr * 8.67;
+..\MasterSlaverPWM\stepperMotor_Contral\motorContral.c(909): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			steptBigFork_Info.pulse = Position * spr * 8.67;
+..\MasterSlaverPWM\stepperMotor_Contral\motorContral.c(918): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			steptBigFork_Info.pulse = (Position + SteptBigforkPositionCompensation) * spr * 8.67;
+..\MasterSlaverPWM\stepperMotor_Contral\motorContral.c(966): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			steptRotate_Info.pulse = (Position + SteptRotatePositionCompensation) * spr;
+..\MasterSlaverPWM\stepperMotor_Contral\motorContral.c: 7 warnings, 0 errors
+linking...
+Program Size: Code=77232 RO-data=840 RW-data=3932 ZI-data=18308  
+FromELF: creating hex file...
+After Build - User command #1: fromelf --bin --output=..\CANopen.bin ..\obj\CANopen.axf
+"..\OBJ\CANopen.axf" - 0 Error(s), 11 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  D:\Users\11038\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:12
+</pre>
+</body>
+</html>
